@@ -1,12 +1,14 @@
 const input = document.querySelector('.input-task')
 const button = document.querySelector('.button-add-task')
 const listComplete = document.querySelector('.list-tasks')
+
+
 let mylist = []
 
 function addNewTask() {
     
-    if (input.value === "" || !input.value.replace(/\s/g, '').length ) {
-        alert("Por favor, insira um texto válido.");
+    if (input.value === "" || !input.value.replace(/\s/g, '').length) {
+        alert("Por favor, insira o que deseja.");
     } else mylist.push({
         task: input.value,
         complete: false
@@ -52,5 +54,7 @@ function rechargeTask() {
 }
 
 
+
 rechargeTask()
+
 button.addEventListener('click', addNewTask)
